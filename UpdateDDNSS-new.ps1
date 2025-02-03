@@ -1,9 +1,9 @@
 # Configuration
 $Config = @{
-    Email   = "s@simonquasar.net"
-    Domain  = "simonquasar.net"
-    Record  = "shinigami.simonquasar.net"
-    Token   = "ouPO9rItEZaA7TkJQEPpq8zAtwieayQ1osFCSUyT"
+    Email   = "EMAIL"
+    Domain  = "BASEDOMAIN"
+    Record  = "SUBDOMAIN.BASEDOMAIN"
+    Token   = "CF_TOKEN"
 }
 
 # Visual Enhancements
@@ -50,7 +50,7 @@ $useCPanel = (Prompt-User "Update cPanel? (Y/N)").ToLower() -eq "y"
 if ($useCloudflare) {
     Show-Section "Cloudflare DDNS Update" $Colors['Accent']
 
-    # Rest of the Cloudflare update code...
+    # see /UpdateDDNS.ps1
 
     Show-Message "Cloudflare Done." $Colors['Accent']
 }
@@ -58,7 +58,7 @@ if ($useCloudflare) {
 if ($useCPanel) {
     Show-Section "cPanel DDNS Update" $Colors['Secondary']
 
-    # Rest of the cPanel update code...
+    # see /UpdateDDNS.ps1
 
     Show-Message "cPanel Done." $Colors['Accent']
 }

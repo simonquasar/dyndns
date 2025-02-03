@@ -3,9 +3,9 @@
 [cmdletbinding()]
 
 param (
-	[string]$domain = "simonquasar.net",
-	[string]$subdomain = "shinigami",
-	[string]$domainIP = "66.45.227.43",
+	[string]$domain = "BASEDOMAIN",
+	[string]$subdomain = "SUBDOMAIN",
+	[string]$domainIP = "DOMAIN_IP",
 	[string]$fullDomain = "$subdomain.$domain",
 	[string]$ttl = "300",
 	[string]$recordType = "A"
@@ -45,8 +45,8 @@ if ($useCloudflare) {
 	Write-Host " "			
 	Write-Host "== Cloudflare DDNS Update" -ForegroundColor Black -BackgroundColor DarkYellow -NoNewline; Write-Host " "			
 	
-	$CFToken = "ouPO9rItEZaA7TkJQEPpq8zAtwieayQ1osFCSUyT"
-	$email = "s@simonquasar.net"
+	$CFToken = "CF_TOKEN"
+	$email = "EMAIL"
 	
 	# Build the request headers.
 	$headers = @{
