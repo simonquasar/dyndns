@@ -1,10 +1,13 @@
+![Static Badge](https://img.shields.io/badge/OK-cPanel?logo=cpanel&label=cPanel&color=green)
+![Static Badge](https://img.shields.io/badge/OK-Cloudflare?logo=cloudflare&label=Cloudflare&color=green)
+
+
 # dynamic dns Cloudflare / CPanel
-Questo script PowerShell aggiorna dinamicamente i record DNS per un dominio specifico utilizzando i servizi di Cloudflare e cPanel, a seconda delle opzioni selezionate. 
-L'utente avvia lo script, che ottiene e visualizza l’IP corrente, chiede se aggiornare i record su Cloudflare e/o cPanel, e aggiorna i record DNS solo se rileva cambiamenti nell’IP.
+Script PowerShell per aggiornare dinamicamente i record DNS per un dominio specifico utilizzando i servizi di Cloudflare e/o cPanel. 
+L'utente avvia lo script, che ottiene e visualizza l’IP corrente, chiede se aggiornare i record su Cloudflare e/o cPanel e aggiorna i record DNS solo se rileva cambiamenti nell’IP.
 
 ### Parametri di Configurazione
-param: Definisce i parametri iniziali, come il dominio (domain), il sottodominio (subdomain), l'IP di dominio (domainIP), e il tipo di record (recordType), con impostazioni predefinite.
-Colori per Output: Usa vari colori per migliorare la leggibilità dell’output in console.
+param: Vanno definiti i parametri iniziali, come il dominio (`domain`), il sottodominio (`subdomain`), l'IP di dominio (`domainIP` facoltativo) e mail (`email`), nonché token API (`CF_token`) per Cloudflare.
 
 ### Funzioni Principali
 #### Recupero dell'IP corrente:
